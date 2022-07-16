@@ -19,7 +19,7 @@ services:
    redis:
     container_name: redis
     image: redis:latest
-    command: redis-server  --requirepass metaticketset
+    command: redis-server --requirepass metaticketset
     restart: always
     ports:
        - "6379:6379"    
