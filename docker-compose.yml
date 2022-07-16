@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+  mariadb:
+    container_name: Mysql-Banco
+    image: mariadb:latest
+    restart: always
+    ports:
+       - "3306:3306"
+    volumes:
+       - /home/ubuntu/mysql:/var/lib/mysql
+    environment:
+       - MYSQL_ROOT_PASSWORD=metaticketset
+       - MYSQL_PASSWORD=metaticketset
+       - MYSQL_USER=admmeta
+       - MYSQL_DATABASE=metaticket
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
+   
+   redis:
+    container_name: redis
+    image: redis:latest
+    command: redis-server  --requirepass metaticketset
+    restart: always
+    ports:
+       - "6379:6379"    
+    volumes:
+      - /home/ubuntu/redis:/var/lib/redis
+
