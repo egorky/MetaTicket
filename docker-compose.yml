@@ -1,25 +1,23 @@
 version: '3.3'
 
 services:
-  mariadb:
-    container_name: Mysql-Banco
-    image: mariadb:latest
+  postgresdb:
+    container_name: postgresSQL
+    image: postgres:latest
     restart: always
     ports:
-       - "3306:3306"
+       - "5432:5432"
     volumes:
-       - /home/ubuntu/mysql:/var/lib/mysql
+       - /home/ubuntu/postgresSQL:/var/lib/mysql
     environment:
-       - MYSQL_ROOT_PASSWORD=metaticketset
-       - MYSQL_PASSWORD=metaticketset
-       - MYSQL_USER=admmeta
-       - MYSQL_DATABASE=metaticket
-    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
+       - POSTGRES_PASSWORD=metaticketset
+       - POSTGRES_USER=metaticket
+       - POSTGRES_DB=metaticket
    
    redis:
     container_name: redis
     image: redis:latest
-    command: redis-server --requirepass metaticketset
+    command: redis-server --requirepass metaticketset --detach redis redis-server
     restart: always
     ports:
        - "6379:6379"    
