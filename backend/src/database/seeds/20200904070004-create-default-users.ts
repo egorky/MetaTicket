@@ -6,8 +6,8 @@ module.exports = {
       "Users",
       [
         {
-          name: "OwenZap",
-          email: "admin@owenzap.com",
+          name: "MetaTicket",
+          email: "admin@metaticket.com",
           passwordHash: "$2a$08$WaEmpmFDD/XkDqorkpQ42eUZozOqRCPkPcTkmHHMyuTGUOkI8dHsq",
           profile: "admin",
           tokenVersion: 0,

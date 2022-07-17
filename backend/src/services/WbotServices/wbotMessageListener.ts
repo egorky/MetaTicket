@@ -8,7 +8,7 @@ import {
   downloadContentFromMessage,
   jidNormalizedUser,
   MediaType,
-  MessageUpdateType,
+  MessageUpsertType,
   proto,
   WALegacySocket,
   WAMessage,
@@ -43,7 +43,7 @@ type Session = AnyWASocket & {
 
 interface ImessageUpsert {
   messages: proto.IWebMessageInfo[];
-  type: MessageUpdateType;
+  type: MessageUpsertType;
 }
 
 interface IMe {
