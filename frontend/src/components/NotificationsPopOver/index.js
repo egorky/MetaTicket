@@ -188,7 +188,7 @@ const NotificationsPopOver = () => {
 
 	return (
 		<>
-			<IconButton
+			{/*<IconButton
 				onClick={handleClick}
 				ref={anchorEl}
 				aria-label="Open Notifications"
@@ -197,7 +197,7 @@ const NotificationsPopOver = () => {
 				<Badge badgeContent={notifications.length} color="secondary">
 					<ChatIcon />
 				</Badge>
-			</IconButton>
+			</IconButton>*/}
 			<Popover
 				disableScrollLock
 				open={isOpen}

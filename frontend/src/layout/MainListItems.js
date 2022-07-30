@@ -102,15 +102,12 @@ const MainListItems = (props) => {
         primary={i18n.t("mainDrawer.listItems.tags")}
         icon={<LocalOfferIcon />}
       />
+
       <Can
         role={user.profile}
         perform="drawer-admin-items:view"
         yes={() => (
-          <>
-            <Divider />
-            <ListSubheader inset>
-              {i18n.t("mainDrawer.listItems.administration")}
-            </ListSubheader>
+              <>
 
             <ListItemLink
               to="/"
@@ -144,10 +141,6 @@ const MainListItems = (props) => {
               primary={i18n.t("mainDrawer.listItems.settings")}
               icon={<SettingsOutlinedIcon />}
             />
-          <Divider />
-            <ListSubheader inset>
-              {i18n.t("mainDrawer.listItems.api")}
-            </ListSubheader>
        
            <ListItemLink
               to="/tokens"
